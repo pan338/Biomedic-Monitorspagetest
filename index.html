@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biomedic Monitors</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #4CA2AF;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #333;
+      overflow: hidden;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav button {
+      color: #fff;
+      background: #4CAF50;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    nav button:hover {
+      background: #45A049;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    #content {
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Biomedic Monitors</h1>
+  </header>
+
+  <nav>
+    <button onclick="showContent('inicio')">Inicio</button>
+    <button onclick="showContent('ofrecemos')">Qué Ofrecemos</button>
+    <button onclick="showContent('contacto')">Contacto</button>
+  </nav>
+
+  <main>
+    <img src="BiomedicMonitors.jpg" alt="Imagen de Biomedic Monitors">
+    <div id="content">
+      <!-- Aquí se cargará el contenido dinámico -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Biomedic Monitors. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function showContent(section) {
+      const content = document.getElementById('content');
+      if (section === 'inicio') {
+        content.innerHTML = `
+          <h2><center>Bienvenidos</center></h2>
+          <p>Somos un equipo dinámico, lleno de pasión por lo que hacemos. Nos gusta buscar soluciones innovadoras y dar forma a tus ideas. Únete a nosotros y hagamos algo extraordinario.</p>
+          <h2><center>Quiénes Somos</center></h2>
+          <p>Somos una empresa dedicada a la tecnología e innovación de "Monitores de Signos Vitales", ofreciendo mantenimiento y soporte técnico.</p>
+          <h2><center>Misión</center></h2>
+          <p>Ser una empresa especializada en diseñar soluciones para el sector salud, reduciendo daños al medio ambiente.</p>
+          <h2><center>Visión</center></h2>
+          <p>Ser la empresa líder en innovación de equipos médicos en México, reconocida por su compromiso con la tecnología avanzada, la seguridad del paciente y la mejora continua en la atención médica.</p>
+        `;
+      } else if (section === 'ofrecemos') {
+        content.innerHTML = `
+          <h2>Qué Ofrecemos</h2>
+          <ul>
+            <li>Monitores portátiles, para ambulancias y para quirófanos.</li>
+            <li>Monitores de signos vitales con alta precisión.</li>
+            <li>Mantenimiento preventivo y correctivo.</li>
+            <li>Somos una empresa responsable con nuestros productos y la seguridad de nuestros clientes.</li>
+          </ul>
+        `;
+      } else if (section === 'contacto') {
+        content.innerHTML = `
+          <h2>Contacto</h2>
+          <p>📞 (55) 1674 5148</p>
+          <p>🌐 biomedicmonitors@contacto.com</p>
+          <p>📍 Calzada Melchor Ocampo 469, Miguel Hidalgo, Ciudad de México, C.P. 11569</p>
+        `;
+      }
+    }
+
+    // Cargar "Inicio" por defecto al abrir
+    window.onload = () => showContent('inicio');
+  </script>
+
+</body>
+</html>
